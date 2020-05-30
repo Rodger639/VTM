@@ -1,6 +1,6 @@
 var app = angular.module("site");
 
  app.controller("HomeController", function(){
-this.welcomeMessage = "Welcome to my V:TM page!";
+this.welcomeMessage = "Добро пожаловать в VtM";
 this.vtmLogo = "./vtmlogo.png";
 });
