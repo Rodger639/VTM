@@ -13,7 +13,7 @@ app.service("AbilitiesService",
    this.resetAbilities = resetAbilities;
    this.resetPriorities = resetPriorities;
    this.setCustomAbility = setCustomAbility;
-   this.abilityPriorities = ["Primary", "Secondary", "Tertiary"];
+   this.abilityPriorities = ["Первичные", "Вторичные", "Третичные"];
    this.abilitiesPage = "./abilities/abilities.html";
    this.abilityPtsTotal = 27;
    this.primaryPts = 13;
@@ -85,69 +85,69 @@ app.service("AbilitiesService",
        };
      }
    };
-   this.alertness = new Ability("Alertness");
+   this.alertness = new Ability("Бдительность");
    this.abilitiesList.alertness = this.alertness;
-   this.athletics = new Ability("Athletics");
+   this.athletics = new Ability("Атлетика");
    this.abilitiesList.athletics = this.athletics;
-   this.awareness = new Ability("Awareness");
+   this.awareness = new Ability("Хитрость");
    this.abilitiesList.awareness = this.awareness;
-   this.brawl = new Ability("Brawl");
+   this.brawl = new Ability("Драка");
    this.abilitiesList.brawl = this.brawl;
-   this.empathy = new Ability("Empathy");
+   this.empathy = new Ability("Эмпатия");
    this.abilitiesList.empathy = this.empathy;
-   this.expression = new Ability("Expression");
+   this.expression = new Ability("Экспрессия");
    this.abilitiesList.expression = this.expression;
-   this.intimidation = new Ability("Intimidation");
+   this.intimidation = new Ability("Запугивание");
    this.abilitiesList.intimidation = this.intimidation;
-   this.leadership = new Ability("Leadership");
+   this.leadership = new Ability("Лидерство");
    this.abilitiesList.leadership = this.leadership;
-   this.streetwise = new Ability("Streetwise");
+   this.streetwise = new Ability("Знание Улиц");
    this.abilitiesList.streetwise = this.streetwise;
-   this.subterfuge = new Ability("Subterfuge");
+   this.subterfuge = new Ability("Уклонение");
    this.abilitiesList.subterfuge = this.subterfuge;
    this.customtalent = new Ability('', 'customtalent');
    this.abilitiesList.customtalent = this.customtalent;
-   this.animalken = new Ability("Animal Ken");
+   this.animalken = new Ability("Знание животных");
    this.abilitiesList.animalken = this.animalken;
-   this.crafts = new Ability("Crafts");
+   this.crafts = new Ability("Ремесла");
    this.abilitiesList.crafts = this.crafts;
-   this.drive = new Ability("Drive");
+   this.drive = new Ability("Вождение");
    this.abilitiesList.drive = this.drive;
-   this.etiquette = new Ability("Etiquette");
+   this.etiquette = new Ability("Этикет");
    this.abilitiesList.etiquette = this.etiquette;
-   this.firearms = new Ability("Firearms");
+   this.firearms = new Ability("Стрельба");
    this.abilitiesList.firearms = this.firearms;
-   this.larceny = new Ability("Larceny");
+   this.larceny = new Ability("Безопасность");
    this.abilitiesList.larceny = this.larceny;
-   this.melee = new Ability("Melee");
+   this.melee = new Ability("Ближний бой");
    this.abilitiesList.melee = this.melee;
-   this.performance = new Ability("Performance");
+   this.performance = new Ability("Исполнение");
    this.abilitiesList.performance = this.performance;
-   this.stealth = new Ability("Stealth");
+   this.stealth = new Ability("Скрытность");
    this.abilitiesList.stealth = this.stealth;
-   this.survival = new Ability("Survival");
+   this.survival = new Ability("Выживание");
    this.abilitiesList.survival = this.survival;
    this.customskill = new Ability('', 'customskill');
    this.abilitiesList.customskill = this.customskill;
-   this.academics = new Ability("Academics");
+   this.academics = new Ability("Академические знания");
    this.abilitiesList.academics = this.academics;
-   this.computer = new Ability("Computer");
+   this.computer = new Ability("Компьютер");
    this.abilitiesList.computer = this.computer;
-   this.finance = new Ability("Finance");
+   this.finance = new Ability("Финансы");
    this.abilitiesList.finance = this.finance;
-   this.investigation = new Ability("Investigation");
+   this.investigation = new Ability("Расследование");
    this.abilitiesList.investigation = this.investigation;
-   this.law = new Ability("Law");
+   this.law = new Ability("Правоведение");
    this.abilitiesList.law = this.law;
-   this.medicine = new Ability("Medicine");
+   this.medicine = new Ability("Медицина");
    this.abilitiesList.medicine = this.medicine;
-   this.occult = new Ability("Occult");
+   this.occult = new Ability("Оккультизм");
    this.abilitiesList.occult = this.occult;
-   this.politics = new Ability("Politics");
+   this.politics = new Ability("Политика");
    this.abilitiesList.politics = this.politics;
-   this.science = new Ability("Science");
+   this.science = new Ability("Наука");
    this.abilitiesList.science = this.science;
-   this.technology = new Ability("Technology");
+   this.technology = new Ability("Лингвистика");
    this.abilitiesList.technology = this.technology;
    this.customknowledge = new Ability('', 'customknowledge');
    this.abilitiesList.customknowledge = this.customknowledge;
@@ -190,13 +190,13 @@ app.service("AbilitiesService",
 
     function getPriorityPts(priority){
      switch(priority){
-       case "Primary":
+       case "Первичные":
          return this.primaryPts;
          break;
-       case "Secondary":
+       case "Вторичные":
          return this.secondaryPts;
          break;
-       case "Tertiary":
+       case "Третичные":
          return this.tertiaryPts;
          break;
        default:
@@ -275,13 +275,13 @@ app.service("AbilitiesService",
 
       //Change the total amount of points still available for that category.
       switch(priority){
-       case "Primary":
+       case "Первичные":
          this.primaryPts += pointDiff;
          break;
-       case "Secondary":
+       case "Вторичные":
          this.secondaryPts += pointDiff;
          break;
-       case "Tertiary":
+       case "Третичные":
          this.tertiaryPts += pointDiff;
          break;
        default:
@@ -308,22 +308,22 @@ app.service("AbilitiesService",
 
         });
         //Reset the point values.
-        if(prevPriority == "Primary"){
+        if(prevPriority == "Первичные"){
           this.primaryPts = 13;
         }
-        if(prevPriority == "Secondary"){
+        if(prevPriority == "Вторичные"){
           this.secondaryPts  = 9;
         }
-        if(prevPriority == "Tertiary"){
+        if(prevPriority == "Третичные"){
           this.tertiaryPts = 5;
         }
-        if(changedPriority == "Primary"){
+        if(changedPriority == "Первичные"){
           this.primaryPts = 13;
         }
-        if(changedPriority == "Secondary"){
+        if(changedPriority == "Вторичные"){
           this.secondaryPts = 9;
         }
-        if(changedPriority == "Tertiary"){
+        if(changedPriority == "Третичные"){
           this.tertiaryPts = 5;
         }
     };

@@ -2,7 +2,7 @@
   <tr>
     <th></th>
     <th></th>
-      <th style="text-align: center; font-size: 18pt; font-weight: 500;">Abilities</th>
+      <th style="text-align: center; font-size: 18pt; font-weight: 500;">Способности</th>
     <th></th>
     <th></th>
     <th></th>
@@ -14,7 +14,7 @@
       ng-change="abCtrl.priorityChange(abCtrl.selectedPriorities[0], 0, abCtrl.abilityCategories[0].priority)"
       ng-if="!abCtrl.freeMode">
     </select>
-    <div class="abHead">Talents</div>
+    <div class="abHead">Таланты</div>
     </th>
     <th style="width:245px;">
       <div class="num">{{abCtrl.getPriorityPts(abCtrl.selectedPriorities[0])}}</div>
@@ -25,7 +25,7 @@
       ng-change="abCtrl.priorityChange(abCtrl.selectedPriorities[1], 1, abCtrl.abilityCategories[1].priority)"
       ng-if="!abCtrl.freeMode">
       </select>
-    <div class="abHead">Skills</div>
+    <div class="abHead">Навыки</div>
     </th>
     <th style="width:245px;">
       <div class="num">{{abCtrl.getPriorityPts(abCtrl.selectedPriorities[1])}}</div>
@@ -36,7 +36,7 @@
       ng-change="abCtrl.priorityChange(abCtrl.selectedPriorities[2], 2, abCtrl.abilityCategories[2].priority)"
       ng-if="!abCtrl.freeMode">
       </select>
-      <div class="abHead">Knowledges</div>
+      <div class="abHead">Познания</div>
     </th>
     <th style="width:245px;">
       <div class="num">{{abCtrl.getPriorityPts(abCtrl.selectedPriorities[2])}}</div>
