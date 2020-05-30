@@ -16,10 +16,10 @@
     </select>
     <div class="abHead">Таланты</div>
     </th>
-    <th style="width:300px;">
+    <th style="width:245px;">
       <div class="num">{{abCtrl.getPriorityPts(abCtrl.selectedPriorities[0])}}</div>
     </th>
-    <th style="padding-top:10px; padding-bottom:10px; width:100px;">
+    <th style="padding-top:10px; padding-bottom:10px; width:130px;">
       <select ng-model="abCtrl.selectedPriorities[1]"
       ng-options="priority for priority in abCtrl.abilityPriorities"
       ng-change="abCtrl.priorityChange(abCtrl.selectedPriorities[1], 1, abCtrl.abilityCategories[1].priority)"
@@ -27,10 +27,10 @@
       </select>
     <div class="abHead">Навыки</div>
     </th>
-    <th style="width:300px;">
+    <th style="width:245px;">
       <div class="num">{{abCtrl.getPriorityPts(abCtrl.selectedPriorities[1])}}</div>
     </th>
-    <th style="width:110px;">
+    <th style="width:140px;">
       <select ng-model="abCtrl.selectedPriorities[2]"
       ng-options="priority for priority in abCtrl.abilityPriorities"
       ng-change="abCtrl.priorityChange(abCtrl.selectedPriorities[2], 2, abCtrl.abilityCategories[2].priority)"
@@ -38,14 +38,14 @@
       </select>
       <div class="abHead">Познания</div>
     </th>
-    <th style="width:300px;">
+    <th style="width:245px;">
       <div class="num">{{abCtrl.getPriorityPts(abCtrl.selectedPriorities[2])}}</div>
     </th>
   </tr>
 </table>
 <table ng-table="abCtrl.tableParams1" show-filter="false" >
   <tr ng-repeat="ability in $data">
-    <td style="width:100px;">
+    <td style="width:150px;">
       <div ng-if="ability.col1.id != null">
         <input class="custom-ability" ng-model="abCtrl.customtalent.name"
                ng-blur="abCtrl.setCustomAbility(ability.col1, abCtrl.customtalent.name)">
