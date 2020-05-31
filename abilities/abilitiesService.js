@@ -119,7 +119,7 @@ app.service("AbilitiesService",
    this.abilitiesList.firearms = this.firearms;
    this.larceny = new Ability("Безопасность");
    this.abilitiesList.larceny = this.larceny;
-   this.melee = new Ability("Ближний бой");
+   this.melee = new Ability("Ближний_бой");
    this.abilitiesList.melee = this.melee;
    this.performance = new Ability("Исполнение");
    this.abilitiesList.performance = this.performance;
