@@ -1,44 +1,44 @@
-<h3>Character Creator</h3>
+<h3>Создание персонажа</h3>
 <div class="col-lg-9">
   <div class="col-lg-12 col-md-12 col-sm-12">
       <div class="row">
         <div class="col-lg-3 col-md-3 col-sm-3">
-          <label termindex term="Player" for="charPlayer" style="margin-right: 3px;">Player: </label>
+          <label termindex term="Player" for="charPlayer" style="margin-right: 3px;">Игрок: </label>
           <input id="charPlayer" ng-model="creatorCtrl.charPlayer"
                  ng-blur="creatorCtrl.setPlayer(creatorCtrl.charPlayer)"/> <!--TODO: Remove the ng-blurs, Replace them with-->
         </div>                                                                   <!--a function in the service when saving.-->
         <div class="col-lg-3 col-md-3 col-sm-3">
-          <label termindex term="Chronicle" for="charChronicle" style="margin-right: 3px;">Chronicle: </label>
+          <label termindex term="Chronicle" for="charChronicle" style="margin-right: 3px;">Хроника: </label>
           <input id="charChronicle" ng-model="creatorCtrl.charChronicle" ng-blur="creatorCtrl.setChronicle(creatorCtrl.charChronicle)"/>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-3">
-          <label termindex term="Name" for="charName">Name: </label>
+          <label termindex term="Name" for="charName">Имя: </label>
           <input id="charName" ng-model="creatorCtrl.charName" ng-blur="creatorCtrl.setName(creatorCtrl.charName)"/>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-3">
-          <label termindex term="Concept" for="charConcept">Concept: </label>
+          <label termindex term="Concept" for="charConcept">Концепт: </label>
           <input id="charConcept" ng-model="creatorCtrl.charConcept" ng-blur="creatorCtrl.setConcept(creatorCtrl.charConcept)"/>
         </div>
       </div>
       <div class="row">
         <div class="col-lg-3 col-md-3 col-sm-3">
-          <label termindex term="Nature" for="charNature">Nature: </label>
+          <label termindex term="Nature" for="charNature">Натура: </label>
           <input id="charNature" ng-model="creatorCtrl.charNature" ng-blur="creatorCtrl.setNature(creatorCtrl.charNature)"/>
           <select id="charNatSelect" ng-model="creatorCtrl.charNature" ng-options="charNat for charNat in creatorCtrl.natureDemeanorList"
                   ng-blur="creatorCtrl.setNature(creatorCtrl.charNature)" style="width:20px; height:26px; position:absolute;"></select>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-3">
-          <label termindex term="Demeanor" for="charDemeanor">Demeanor: </label>
+          <label termindex term="Demeanor" for="charDemeanor">Маска: </label>
           <input id="charDemeanor" ng-model="creatorCtrl.charDemeanor" ng-blur="creatorCtrl.setDemeanor(creatorCtrl.charDemeanor)"/>
           <select id="charDemSelect" ng-model="creatorCtrl.charDemeanor" ng-options="charDem for charDem in creatorCtrl.natureDemeanorList"
                   ng-blur="creatorCtrl.setDemeanor(creatorCtrl.charDemeanor)" style="max-width:20px; height:26px; position: absolute;"></select>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-3">
-          <label termindex term="Sire" for="charSire" style="margin-right: 12px;">Sire: </label>
+          <label termindex term="Sire" for="charSire" style="margin-right: 12px;">Сир: </label>
           <input id="charSire" ng-model="creatorCtrl.charSire" ng-blur="creatorCtrl.setSire(creatorCtrl.charSire)"/>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-3">
-          <label termindex term="Generation" for="charGeneration">Generation: </label>
+          <label termindex term="Generation" for="charGeneration">Поколение: </label>
           <select id="charGeneration" ng-model="creatorCtrl.charGeneration"
                   ng-options="charGen for charGen in creatorCtrl.generations" ng-blur="creatorCtrl.setGeneration(creatorCtrl.charGeneration)">
           </select>
@@ -47,13 +47,13 @@
       <br />
       <div ng-controller="ClanController as clanCtrl">
         <div class="row">
-          <label for="clanFilter" style="margin-right: 30px;">Clan Filter: </label>
+          <label for="clanFilter" style="margin-right: 30px;">Фильтр Кланов: </label>
           <select id="clanFilter" ng-model="clanCtrl.selectedClanFilter" ng-options="filter for filter in clanCtrl.clanFilters"
                   ng-change="clanCtrl.filterClans(clanCtrl.selectedClanFilter)">
           </select>
         </div>
         <div class="row">
-          <label for="clanSelect">Clan/Bloodline: </label>
+          <label for="clanSelect">Клан/Линия крови: </label>
           <select id="clanSelect" ng-model="clanCtrl.selectedClan" ng-options="clan.name for clan in clanCtrl.filteredClanList"
                   ng-change="setUClan(clanCtrl.selectedClan)" ng-blur="clanCtrl.setClan(clanCtrl.selectedClan)">
           </select>
@@ -71,15 +71,15 @@
       <ng-include src="tindexCtrl.termIndexPage"></ng-include>
     </div>
     <div ng-controller="SaveController as saveCtrl">
-      <button ng-hide="!creatorCtrl.loggedIn" ng-click="saveCtrl.saveCharacter()">Save Character</button>
+      <button ng-hide="!creatorCtrl.loggedIn" ng-click="saveCtrl.saveCharacter()">Сохранить персонажа</button>
     </div>
     <div class="col-lg-3" ng-controller="LoadController as loadCtrl">
       <!-- <button ng-hide="!creatorCtrl.loggedIn" ng-click="loadCtrl.loadChars()">Load Character</button> -->
       <ng-include src="loadCtrl.loadPage"></ng-include>
     </div>
     <div ng-controller="PdfController as pdfCtrl">
-      <button ng-click="pdfCtrl.generatePDF()">Export PDF</button>
-      <button ng-click="pdfCtrl.generateInteractivePDF()">Export Interactive PDF</button>
+      <button ng-click="pdfCtrl.generatePDF()">Экспорт PDF</button>
+      <button ng-click="pdfCtrl.generateInteractivePDF()">Экспорт Interactive PDF</button>
     </div>
     <!-- <div ng-controller="UploadController as upCtrl">
       <button ng-click="upCtrl.uploadImage()">Upload Image</button>
@@ -92,7 +92,7 @@
     <div class="numdis">
       {{creatorCtrl.getFreebiePts()}}
     </div>
-    <button ng-click="creatorCtrl.toggleFreebieMode()">Toggle Freebie Mode</button>
+    <button ng-click="creatorCtrl.toggleFreebieMode()">Переключить в свободный режим</button>
     <ng-include src="discCtrl.disciplinesPage"></ng-include>
   </div>
   <div style="margin-bottom:10px;" class="col-lg-3" ng-controller="BackgroundsController as backCtrl">
