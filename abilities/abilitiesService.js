@@ -107,7 +107,7 @@ app.service("AbilitiesService",
    this.abilitiesList.subterfuge = this.subterfuge;
    this.customtalent = new Ability('', 'customtalent');
    this.abilitiesList.customtalent = this.customtalent;
-   this.animalken = new Ability("Знание животных");
+   this.animalken = new Ability("Знание_животных");
    this.abilitiesList.animalken = this.animalken;
    this.crafts = new Ability("Ремесла");
    this.abilitiesList.crafts = this.crafts;
@@ -129,7 +129,7 @@ app.service("AbilitiesService",
    this.abilitiesList.survival = this.survival;
    this.customskill = new Ability('', 'customskill');
    this.abilitiesList.customskill = this.customskill;
-   this.academics = new Ability("Академические знания");
+   this.academics = new Ability("Академические");
    this.abilitiesList.academics = this.academics;
    this.computer = new Ability("Компьютер");
    this.abilitiesList.computer = this.computer;
