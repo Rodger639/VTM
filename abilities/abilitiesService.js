@@ -129,7 +129,7 @@ app.service("AbilitiesService",
    this.abilitiesList.survival = this.survival;
    this.customskill = new Ability('', 'customskill');
    this.abilitiesList.customskill = this.customskill;
-   this.academics = new Ability("Академические");
+   this.academics = new Ability("Академия");
    this.abilitiesList.academics = this.academics;
    this.computer = new Ability("Компьютер");
    this.abilitiesList.computer = this.computer;
