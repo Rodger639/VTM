@@ -10,10 +10,11 @@ app.service("BackgroundsService", ['CharCreatorService',
    this.chooseBackground = chooseBackground;
    this.resetBackgrounds = resetBackgrounds;
 
-   this.backgroundList = ["", "Allies", "Alternate Identity", "Black Hand Memebership",
-                          "Contacts", "Domain", "Fame", "Generation",
-                          "Herd", "Influence", "Mentor", "Resources",
-                          "Retainers", "Rituals", "Status"];
+   this.backgroundList = ["", "Арсенал", "Союзники", "Связи", "Слава", "Влияние", "Ментор", "Ресурсы", "Слуги", "Альтернативная личность", 
+						"Призрачные рабы", "Вооруженные силы", "Загадочность", "Информационная сеть", "Оккультная библиотека", "Статус",
+						"Статус в Шабаше", "Статус у Анархов", "Статус среди Сетитов", "Таинства Шабаша", "Общее убежище", "Уважение стаи",
+						"Информационный обмен Анархов", "Возраст", "Титулы", "Престиж в клане", "Домен", "Членство в Черной Руке", "Поколение",
+						"Стадо"];
 
   function freeBackgroundPt(background, index){
     if(index == 0 && background.pointCount == 1){
