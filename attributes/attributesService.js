@@ -223,7 +223,7 @@ function freeAttribute(attribute, index, catIndex){
 
 function selectAttribute(attribute, index, catIndex){
 
-  if(attribute.name == "Appearance" && UglyService.isUgly()){
+  if(attribute.name == "Внешность" && UglyService.isUgly()){
     return null;
   }
   var priority = this.getPriority(attribute);
@@ -277,13 +277,13 @@ function selectAttribute(attribute, index, catIndex){
 
   //Change the total amount of points still available for that category.
   switch(priority){
-    case "Primary":
+    case "Первичные":
       this.primaryPts += pointDiff;
       break;
-    case "Secondary":
+    case "Вторичные":
       this.secondaryPts += pointDiff;
       break;
-    case "Tertiary":
+    case "Третичные":
       this.tertiaryPts += pointDiff;
       break;
     default:
