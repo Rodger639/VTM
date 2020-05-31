@@ -3,12 +3,12 @@
   <div class="col-lg-12 col-md-12 col-sm-12">
       <div class="row">
         <div class="col-lg-3 col-md-3 col-sm-3">
-          <label termindex term="Player" for="charPlayer" style="margin-right: 3px;">Игрок: </label>
+          <label termindex term="Player" for="charPlayer">Игрок: </label>
           <input id="charPlayer" ng-model="creatorCtrl.charPlayer"
-                 ng-blur="creatorCtrl.setPlayer(creatorCtrl.charPlayer)"/> <!--TODO: Remove the ng-blurs, Replace them with-->
+					ng-blur="creatorCtrl.setPlayer(creatorCtrl.charPlayer)"/> <!--TODO: Remove the ng-blurs, Replace them with-->
         </div>                                                                   <!--a function in the service when saving.-->
         <div class="col-lg-3 col-md-3 col-sm-3">
-          <label termindex term="Chronicle" for="charChronicle" style="margin-right: 3px;">Хроника: </label>
+          <label termindex term="Chronicle" for="charChronicle">Хроника: </label>
           <input id="charChronicle" ng-model="creatorCtrl.charChronicle" ng-blur="creatorCtrl.setChronicle(creatorCtrl.charChronicle)"/>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-3">
