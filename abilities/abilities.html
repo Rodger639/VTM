@@ -30,7 +30,7 @@
     <th style="width:245px;">
       <div class="num">{{abCtrl.getPriorityPts(abCtrl.selectedPriorities[1])}}</div>
     </th>
-    <th style="width:150px;">
+    <th style="width:110px;">
       <select ng-model="abCtrl.selectedPriorities[2]"
       ng-options="priority for priority in abCtrl.abilityPriorities"
       ng-change="abCtrl.priorityChange(abCtrl.selectedPriorities[2], 2, abCtrl.abilityCategories[2].priority)"
@@ -62,7 +62,7 @@
         <img class="abimg" ng-src="{{abPt.img}}" ng-click="abCtrl.freeAbility(ability.col1, $index)" ng-if="abCtrl.freeMode"/>
       </div>
     </td>
-    <td style="width:100px;">
+    <td style="width:150px;">
       <div ng-if="ability.col2.id != null">
         <input class="custom-ability" ng-model="abCtrl.customskill.name"
                ng-blur="abCtrl.setCustomAbility(ability.col2, abCtrl.customskill.name)">
