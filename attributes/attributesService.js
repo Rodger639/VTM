@@ -12,7 +12,7 @@ app.service('AttributesService', ['UglyService', 'CharCreatorService',
   this.isUglyClan = isUglyClan;
   this.resetAttributes = resetAttributes;
   this.resetPriorities = resetPriorities;
-  this.attributePriorities = ["Primary", "Secondary", "Tertiary"];
+  this.attributePriorities = ["Первичные", "Вторичные", "Третичные"];
   this.attributesPage = "./attributes/attributes.html";
   this.attributePtsTotal = 15;
   this.primaryPts = 7;
@@ -97,23 +97,23 @@ app.service('AttributesService', ['UglyService', 'CharCreatorService',
     };
   };
 
-  this.strength = new Attribute("Strength");
+  this.strength = new Attribute("Сила");
   this.attributesList.strength = this.strength;
-  this.dexterity = new Attribute("Dexterity");
+  this.dexterity = new Attribute("Ловкость");
   this.attributesList.dexterity = this.dexterity
-  this.stamina = new Attribute("Stamina");
+  this.stamina = new Attribute("Выносливость");
   this.attributesList.stamina = this.stamina;
-  this.charisma = new Attribute("Charisma");
+  this.charisma = new Attribute("Харизма");
   this.attributesList.charisma = this.charisma;
-  this.manipulation = new Attribute("Manipulation");
+  this.manipulation = new Attribute("Манипуляция");
   this.attributesList.manipulation = this.manipulation;
-  this.appearance = new Attribute("Appearance")
+  this.appearance = new Attribute("Внешность")
   this.attributesList.appearance = this.appearance;
-  this.perception = new Attribute("Perception");
+  this.perception = new Attribute("Восприятие");
   this.attributesList.perception = this.perception
-  this.intelligence = new Attribute("Intelligence");
+  this.intelligence = new Attribute("Интеллект");
   this.attributesList.intelligence = this.intelligence;
-  this.wits = new Attribute("Wits");
+  this.wits = new Attribute("Смекалка");
   this.attributesList.wits = this.wits;
 
   this.attributeCategories = [
@@ -196,13 +196,13 @@ function getPriority(attribute){
 
 function getPriorityPts(priority){
   switch(priority){
-    case "Primary":
+    case "Первичные":
       return this.primaryPts;
       break;
-    case "Secondary":
+    case "Вторичные":
       return this.secondaryPts;
       break;
-    case "Tertiary":
+    case "Третичные":
       return this.tertiaryPts;
       break;
     default:
@@ -313,22 +313,22 @@ function priorityChange(changedPriority, id, prevPriority){
 
     });
     //Reset the point values.
-    if(prevPriority == "Primary"){
+    if(prevPriority == "Первичные"){
       this.primaryPts = 7;
     }
-    if(prevPriority == "Secondary"){
+    if(prevPriority == "Вторичные"){
       this.secondaryPts  = 5;
     }
-    if(prevPriority == "Tertiary"){
+    if(prevPriority == "Третичные"){
       this.tertiaryPts = 3;
     }
-    if(changedPriority == "Primary"){
+    if(changedPriority == "Первичные"){
       this.primaryPts = 7;
     }
-    if(changedPriority == "Secondary"){
+    if(changedPriority == "Вторичные"){
       this.secondaryPts = 5;
     }
-    if(changedPriority == "Tertiary"){
+    if(changedPriority == "Третичные"){
       this.tertiaryPts = 3;
     }
   };
